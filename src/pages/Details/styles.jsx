@@ -4,9 +4,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     
-    padding: 4rem 0;
+    padding: 8rem 0;
 
-
+    
     h1 {
         margin: 3rem 0;
     }
