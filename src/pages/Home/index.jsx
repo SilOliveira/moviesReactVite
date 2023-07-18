@@ -1,6 +1,6 @@
 import {Container, MovieList, Movie} from "./styles.jsx";
 import {useState, useEffect} from 'react'
-
+import { Link } from "react-router-dom";
 
 const api_key= import.meta.env.VITE_API_KEY;
 const image_path=`https://image.tmdb.org/t/p/w1280`;
@@ -32,7 +32,10 @@ function Home() {
       {movies.map(movie => {
         return (
           <Movie key={movie.id}>
-            <a href="https://google.com.br"><img src={`${image_path + movie.poster_path}`} alt={movie.title}/></a>
+            
+           <Link to={`/details/${movie.id}`}><img src={`${image_path + movie.poster_path}`} alt={movie.title}/></Link>
+            
+                    
             <span>{movie.title}</span>
           </Movie>
         )
